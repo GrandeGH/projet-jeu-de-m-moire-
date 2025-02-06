@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="templateJeuDeMemoire">
+        <h1>Jeu de Mémoire</h1>
+        <div class="listeDifficultés">
+            <button class="difficulté">Facile</button>
+            <button class="difficulté">Moyen</button>
+            <button class="difficulté">Difficile</button>
+        </div>
+        <div  class="coupsTemps">
+            <div class="coups">Coups : <span>1</span></div>
+            <div class="temps">Temps : <span>0:00</span></div>
+        </div>
+        <div class="grille">
+            <div class="board" data-dimension="3"></div>
+            <div class="win">You won</div>
+            <div class="colonne1">
+                <div id="carte0" class="carte"></div>
+                <div id="carte1" class="carte"></div>
+                <div id="carte2" class="carte"></div>
+                <div id="carte3" class="carte"></div>
+            </div>
+            <div class="colonne2">
+                <div id="carte4" class="carte"></div>
+                <div id="carte5" class="carte"></div>
+                <div id="carte6" class="carte"></div>
+                <div id="carte7" class="carte"></div>
+            </div>
+            <div class="colonne3">
+                <div id="carte8" class="carte"></div>
+                <div id="carte9" class="carte"></div>
+                <div id="carte10" class="carte"></div>
+                <div id="carte11" class="carte"></div>
+            </div>
+        </div>
+        <div class="nouvellePartie">
+            <button class="btnNG" onclick="window.location.reload()">Nouvelle Partie</button>    
+        </div>
+    </div>
+    
+    <script src="./main.js"></script>
+</body>
+</html>
