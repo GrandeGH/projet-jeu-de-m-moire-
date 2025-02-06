@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    width: 100vw;
+    height: 100%;
+    background-color: rgb(29, 74, 146);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.difficultés {
+    margin-bottom: 20px;
+    gap: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.game-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 5px;
+    font-size: 50px;
+    color: white;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto 20px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    perspective: 1000px;
+}
+.card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner{
+    transform:  rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+/* Front de la cartes  */
+
+.card-front{
+    background-color: rgb(233, 209, 32);
+    color: blueviolet;
+    background-image: linear-gradient(135deg, #34494e 25%, transparent 25%), linear-gradient(225deg, #34495e, 25%, transparent 25%), 
+    linear-gradient(45deg, #34495e, 25%, transparent 25%), linear-gradient(315deg, #34495e, 25%, #2c3e50 25%);
+    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
+    border: 2px solid #ecf0f1;
+}
+
+.card-back{
+    background-color: #fff;
+    color: #333;
+    transform: rotateY(180deg);
+}
+
+#status, button{
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #00b894;
+}
+#reset-btn{
+    margin-top: auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    background-color: #00b894;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3 ease;
+}
+#reset-btn:hover {
+    background-color: #00a67c;
+}

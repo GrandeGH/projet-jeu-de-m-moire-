@@ -54,10 +54,15 @@ button {
 
 /* /////////////// carrés ///////////////// */
 
-.ensembleDeCartes {
+.grille {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    gap: 10px;    
     margin: 10px;
+    width: 370px;
+    height: 400px;
 }
 
 .colonne1, .colonne2, .colonne3 {
