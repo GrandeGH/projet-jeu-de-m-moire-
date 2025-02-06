@@ -96,14 +96,14 @@ h1 {
     transform: rotateY(180deg);
 }
 
-#status, button{
+#status{
     margin-top: 20px;
     font-size: 1.2em;
     font-weight: bold;
     color: #00b894;
 }
-#reset-btn{
-    margin-top: auto;
+#reset-btn, button{
+    margin-bottom: 5px ;
     padding: 10px 20px;
     font-size: 1em;
     border: none;
@@ -113,6 +113,14 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3 ease;
 }
+
+
 #reset-btn:hover {
     background-color: #00a67c;
+}
+
+#reset-btn {
+    font-size: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(89, 85, 213);
 }
